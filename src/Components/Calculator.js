@@ -6,7 +6,7 @@ export const Calculator = () => {
 
    const AppendValueHandler = (el) => {
     const value = el.target.getAttribute("data")
-    console.log(value)
+    setCurrent(current + value)
    }
   return (
     <>
@@ -15,7 +15,7 @@ export const Calculator = () => {
             <Previous>
                 10+
             </Previous>
-            <Current>10</Current>
+            <Current>{current}</Current>
         </Screen>
         <Button gridSpan={2}>AC</Button>
         <Button>DEL</Button>
